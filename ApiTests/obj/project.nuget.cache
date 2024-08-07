@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kG9HGagyxF3LDrjteBEeysIQDUmkq8erY2KOs1cxdYB5mg+cDqqB7ELaBIIHW8yCcHG4dwobdalPuxmarHxSeA==",
+  "dgSpecHash": "j69WQwHWxRCK3Z31xiTjS8MXdKEqUywxtXzgnaBfyspY2bdzm5uHINnCpMEVI9TPuiKFT5llBXQMX1DBTfUqlg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\ApiTests.csproj",
+  "projectFilePath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\ApiTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\836574281\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\836574281\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

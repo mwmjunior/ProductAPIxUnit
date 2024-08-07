@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\836574281\\Documents\\Nova pasta\\TesteApixUnit\\TesteApixUnit.csproj": {}
+    "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\TesteApixUnit\\TesteApixUnit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\ApiTests.csproj": {
+    "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\ApiTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\ApiTests.csproj",
+        "projectUniqueName": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\ApiTests.csproj",
         "projectName": "ApiTests",
-        "projectPath": "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\ApiTests.csproj",
+        "projectPath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\ApiTests.csproj",
         "packagesPath": "C:\\Users\\836574281\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\obj\\",
+        "outputPath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\836574281\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -100,14 +100,14 @@
         }
       }
     },
-    "C:\\Users\\836574281\\Documents\\Nova pasta\\TesteApixUnit\\TesteApixUnit.csproj": {
+    "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\TesteApixUnit\\TesteApixUnit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\836574281\\Documents\\Nova pasta\\TesteApixUnit\\TesteApixUnit.csproj",
+        "projectUniqueName": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\TesteApixUnit\\TesteApixUnit.csproj",
         "projectName": "TesteApixUnit",
-        "projectPath": "C:\\Users\\836574281\\Documents\\Nova pasta\\TesteApixUnit\\TesteApixUnit.csproj",
+        "projectPath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\TesteApixUnit\\TesteApixUnit.csproj",
         "packagesPath": "C:\\Users\\836574281\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\836574281\\Documents\\Nova pasta\\TesteApixUnit\\obj\\",
+        "outputPath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\TesteApixUnit\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\836574281\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -124,8 +124,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\ApiTests.csproj": {
-                "projectPath": "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\ApiTests.csproj"
+              "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\ApiTests.csproj": {
+                "projectPath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\ApiTests.csproj"
               }
             }
           }

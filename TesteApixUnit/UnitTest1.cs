@@ -63,15 +63,38 @@ namespace TesteApixUnit
 }
 */
 
+using ApiTests.Controllers;
 using ApiTests.Domains;
 using ApiTests.Interface;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.TestPlatform.Utilities;
 using Moq;
+using Xunit.Abstractions;
 
 namespace TesteApixUnit
 {
     // Indica que a classe contém métodos de teste de unidade
     public class UnitTest1
     {
+
+        // ADICIONAL
+        // O xUnit não exibe saídas do Console.WriteLine no console de saída durante a execução dos testes.
+        // Para contornar isso, podemos usar a interface ITestOutputHelper fornecida pelo xUnit para capturar e
+        // exibir saídas de log dentro do contexto dos testes unitários.
+
+        private readonly ITestOutputHelper output; //  output é a variável declarada na classe e que será utilizada para registrar as saídas dos testes.
+
+        //readonly indica que essa variável só pode ser atribuída no momento de sua declaração ou dentro do construtor da classe.
+        //Isso garante que o valor da variável output não seja modificado em outros lugares do código após a construção do objeto.
+
+
+        // Construtor que recebe uma instância de ITestOutputHelper.
+        // Isso permite capturar e exibir saídas de log durante a execução dos testes.
+        public UnitTest1(ITestOutputHelper output)
+        {
+            this.output = output;  // A variável de instância `output` é usada para capturar e exibir as mensagens de log.
+        }                           // Ela é declarada na classe e atribuída no construtor.
+
         [Fact]
         public void Get()
         {
@@ -120,5 +143,110 @@ namespace TesteApixUnit
 
             // ATENÇÃO: REFERENCIAR O PROJETO PARA FUNCIONAR
         }
+
+        [Fact]
+        public void Put()
+        {
+            // Arrange: Organizar (Cenário)
+            var existingProductId = Guid.NewGuid();
+            var existingProduct = new Product { IdProduct = existingProductId, Name = "Produto Existente", Price = 20 };
+            var updatedProduct = new Product { IdProduct = existingProductId, Name = "Produto Atualizado", Price = 25 };
+
+            // Cria um objeto de simulação do tipo IProductsRepository
+            var mockRepository = new Mock<IProductsRepository>();
+
+            // Configura o método GetById para retornar o produto existente
+            mockRepository.Setup(x => x.GetById(existingProductId)).Returns(existingProduct);
+
+            // Configura o método Put para atualizar o produto
+            mockRepository.Setup(x => x.Put(existingProductId, updatedProduct)).Verifiable();
+
+            // Act: Agir
+            var controller = new ProductsController(mockRepository.Object);
+            var result = controller.Put(existingProductId, updatedProduct);
+
+            // Assert: Provar
+            // Verifica se o método Put foi chamado uma vez com os parâmetros especificados
+            mockRepository.Verify(x => x.Put(existingProductId, updatedProduct), Times.Once);
+
+            // Verifica se o resultado da ação é NoContent
+            Assert.IsType<NoContentResult>(result);
+        }
+
+        [Fact]
+        public void Delete()
+        {
+            // Arrange: Organizar (Cenário)
+            var existingProductId = Guid.NewGuid();
+            var existingProduct = new Product { IdProduct = existingProductId, Name = "Produto Existente", Price = 20 };
+
+            // Cria um objeto de simulação do tipo IProductsRepository
+            var mockRepository = new Mock<IProductsRepository>();
+
+            // Configura o método GetById para retornar o produto existente
+            mockRepository.Setup(x => x.GetById(existingProductId)).Returns(existingProduct);
+
+            // Configura o método Delete para deletar o produto
+            mockRepository.Setup(x => x.Delete(existingProductId)).Verifiable();
+
+            // Act: Agir
+            var controller = new ProductsController(mockRepository.Object);
+            var result = controller.Delete(existingProductId);
+
+            // Assert: Provar
+            // Verifica se o método Delete foi chamado uma vez com o parâmetro especificado
+            mockRepository.Verify(x => x.Delete(existingProductId), Times.Once);
+
+            // Verifica se o resultado da ação é NoContent
+            Assert.IsType<NoContentResult>(result);
+        }
+
+        [Fact]
+        public void Put_AtualizaProdutoExistente_RetornaNoContent()
+        {
+            // Arrange: Organizar (Cenário)
+            var existingProductId = Guid.NewGuid(); // Cria um ID para um produto existente
+            var existingProduct = new Product
+            {
+                IdProduct = existingProductId,
+                Name = "Produto Existente",
+                Price = 20
+            };
+            var updatedProduct = new Product
+            {
+                IdProduct = existingProductId,
+                Name = "Produto Atualizado",
+                Price = 25
+            };
+
+            // Cria um objeto de simulação (mock) do repositório de produtos
+            var mockRepository = new Mock<IProductsRepository>();
+
+            // Configura o método GetById para retornar o produto existente quando chamado com o ID do produto
+            mockRepository.Setup(x => x.GetById(existingProductId)).Returns(existingProduct);
+
+            // Configura o método Put para ser chamado corretamente com o ID e o produto atualizado
+            mockRepository.Setup(x => x.Put(existingProductId, updatedProduct)).Verifiable();
+
+            // Adiciona uma mensagem ao console para indicar que o Arrange foi concluído
+            output.WriteLine("Arrange: Produto existente e produto atualizado configurados.");
+
+            // Act: Agir
+            var controller = new ProductsController(mockRepository.Object);
+            var result = controller.Put(existingProductId, updatedProduct);
+
+            // Adiciona uma mensagem ao console para indicar que o método Put foi chamado
+            output.WriteLine($"Act: Método Put chamado para o produto com ID {existingProductId}.");
+
+            // Assert: Provar
+            mockRepository.Verify(x => x.Put(existingProductId, updatedProduct), Times.Once); // Verifica se o método Put foi chamado uma vez
+            Assert.IsType<NoContentResult>(result); // Verifica se o retorno do método é do tipo NoContentResult
+
+            // Adiciona uma mensagem ao console para indicar que o teste foi concluído com sucesso
+            output.WriteLine("Assert: Verificações concluídas. Teste Put passou.");
+        }
+
+
+
     }
 }

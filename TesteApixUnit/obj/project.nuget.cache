@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0Wyazv0WuqeA4Tfa6i2d+8PnYr9dvOi5UvgPzq4fkI/Y8qlxsL/H8nQ1Ily2N8gZMMzz0rz/3h9+fUNTxEh5UA==",
+  "dgSpecHash": "zC71Ffhty+kMYi5tLmvuRJeEvcGp92jycEmwIHEnk1ZfA2DtKCn3VZogGM5esVsog30LxljIxkY/FhK4uqDnlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\836574281\\Documents\\Nova pasta\\TesteApixUnit\\TesteApixUnit.csproj",
+  "projectFilePath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\TesteApixUnit\\TesteApixUnit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\836574281\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\836574281\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

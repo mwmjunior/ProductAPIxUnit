@@ -4685,11 +4685,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\ApiTests.csproj",
+      "projectUniqueName": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\ApiTests.csproj",
       "projectName": "ApiTests",
-      "projectPath": "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\ApiTests.csproj",
+      "projectPath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\ApiTests.csproj",
       "packagesPath": "C:\\Users\\836574281\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\836574281\\Documents\\Nova pasta\\ApiTests\\obj\\",
+      "outputPath": "C:\\Users\\836574281\\Desktop\\ProductAPIxUnit\\ApiTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\836574281\\AppData\\Roaming\\NuGet\\NuGet.Config",
